@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paper Mart | Pricing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="logo">Paper Mart</div>
+    <nav>
+      <button class="menu-toggle">Menu</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="section">
+      <h2>Sample Pricing</h2>
+      <p>Prices below are sample/indicative only. For latest rates please contact us.</p>
+      <div class="table-wrapper">
+        <table class="pricing-table">
+          <thead>
+          <tr>
+            <th>Category</th>
+            <th>Item</th>
+            <th>Unit</th>
+            <th>Approx. Price</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Printing Paper</td>
+            <td>A4 70gsm Ream</td>
+            <td>500 sheets</td>
+            <td>Rs. 900–1200</td>
+          </tr>
+          <tr>
+            <td>Notebooks</td>
+            <td>College Notebook</td>
+            <td>Per piece</td>
+            <td>Rs. 70–150</td>
+          </tr>
+          <tr>
+            <td>Office Stationery</td>
+            <td>Ballpoint (Box)</td>
+            <td>50 pcs</td>
+            <td>Rs. 400–700</td>
+          </tr>
+          <tr>
+            <td>Registers</td>
+            <td>Cash/Stock Register</td>
+            <td>Per piece</td>
+            <td>Rs. 250–500</td>
+          </tr>
+          <tr>
+            <td>Custom Printing</td>
+            <td>Visiting Cards (Single Side)</td>
+            <td>100 cards</td>
+            <td>On request</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:10px;font-size:0.85rem;color:#6b7280;">
+        *Prices can change based on brand, quality and quantity. Please call us for accurate quotation.
+      </p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  © <span id="year"></span> Paper Mart. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

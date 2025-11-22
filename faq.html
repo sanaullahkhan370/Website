@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paper Mart | FAQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="logo">Paper Mart</div>
+    <nav>
+      <button class="menu-toggle">Menu</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Do you provide wholesale rates?</h3>
+        <p>Yes, we provide special wholesale rates for shops, schools and offices.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can you arrange special paper sizes?</h3>
+        <p>Yes, we can arrange special sizes and types on request, subject to availability.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you offer delivery?</h3>
+        <p>Delivery is available within city limits for bulk orders. Please contact us for details.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you customize letterheads and visiting cards?</h3>
+        <p>Yes, we offer custom printing services for business stationery and branding.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are your timings?</h3>
+        <p>Our standard opening hours are 9:00 AM to 9:00 PM, Monday to Saturday.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  © <span id="year"></span> Paper Mart. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paper Mart | About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="logo">Paper Mart</div>
+    <nav>
+      <button class="menu-toggle">Menu</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="section">
+      <h2>About Paper Mart</h2>
+      <p>
+        Paper Mart is a dedicated paper and stationery store providing complete solutions
+        for schools, colleges, offices and businesses. From basic photocopy paper to
+        premium stationery and custom printed items, we aim to be your trusted partner.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Our Mission</h2>
+      <p>
+        To make quality paper and stationery accessible, affordable and easily available
+        for students, teachers, professionals and businesses with honest service.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Why Customers Trust Us</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Quality Products</h3>
+          <p>We choose reliable brands and maintain consistent product quality.</p>
+        </div>
+        <div class="card">
+          <h3>Fair Pricing</h3>
+          <p>Transparent pricing and competitive rates for both retail and wholesale buyers.</p>
+        </div>
+        <div class="card">
+          <h3>Support & Guidance</h3>
+          <p>We help customers pick the right paper and stationery for their exact needs.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  © <span id="year"></span> Paper Mart. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

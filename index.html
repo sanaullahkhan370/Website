@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paper Mart | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="logo">Paper Mart</div>
+    <nav>
+      <button class="menu-toggle">Menu</button>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Your One-Stop Paper & Stationery Mart</h1>
+        <p>
+          High-quality papers, notebooks, office stationery, school supplies,
+          printing paper and more — all in one place with wholesale and retail options.
+        </p>
+        <a href="products.html" class="btn-primary">View Products</a>
+      </div>
+      <div class="hero-card">
+        <h2>Why Paper Mart?</h2>
+        <ul class="hero-list">
+          <li>• Wholesale & retail paper supply</li>
+          <li>• Photocopy, printing & lamination support</li>
+          <li>• School, college & office stationery</li>
+          <li>• Custom order for shops & institutions</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Top Categories</h2>
+      <p>Most in-demand products at Paper Mart.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Printing Paper</h3>
+          <p>A4, Legal, Letter size multipurpose papers for office and home use.</p>
+        </div>
+        <div class="card">
+          <h3>Notebooks & Registers</h3>
+          <p>School notebooks, examination copies, registers and subject-wise copies.</p>
+        </div>
+        <div class="card">
+          <h3>Office Stationery</h3>
+          <p>Pens, markers, files, folders, envelops, staplers, clips and more.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  © <span id="year"></span> Paper Mart. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -27,6 +27,7 @@ header{background:#0f172a}
   display:flex;
   justify-content:space-between;
   align-items:center;
+  flex-wrap:wrap;
 }
 .logo{
   font-size:22px;
@@ -37,8 +38,10 @@ header{background:#0f172a}
   color:#fff;
   margin-left:18px;
   text-decoration:none;
+  font-size:15px;
 }
-.nav-links a:hover{color:#facc15}
+.nav-links a:hover,
+.nav-links a.active{color:#facc15}
 
 /* PRODUCTS */
 .products-section{
@@ -109,9 +112,7 @@ header{background:#0f172a}
   font-weight:600;
   transition:.3s;
 }
-.order-btn:hover{
-  background:#1ebd5a;
-}
+.order-btn:hover{background:#1ebd5a}
 
 /* HERO */
 .hero{
@@ -161,6 +162,11 @@ header{background:#0f172a}
   z-index:1000;
 }
 .whatsapp:hover{background:#0cce56}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr}
+}
 </style>
 </head>
 
@@ -170,14 +176,14 @@ header{background:#0f172a}
   <div class="navbar">
     <div class="logo">Ayan Paper Mart</div>
     <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Products</a>
-      <a href="#">Services</a>
-      <a href="#">Pricing</a>
-      <a href="#">Gallery</a>
-      <a href="#">FAQ</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </header>
@@ -198,7 +204,7 @@ header{background:#0f172a}
     <h1>Your One-Stop Paper & Stationery Mart</h1>
     <p>
       High-quality papers, notebooks, office stationery, school supplies,
-      printing paper and more — all in one place with wholesale and retail options.
+      printing paper and more — wholesale & retail available.
     </p>
   </div>
 
@@ -206,9 +212,9 @@ header{background:#0f172a}
     <h2>Why Paper Mart?</h2>
     <ul>
       <li>• Wholesale & retail paper supply</li>
-      <li>• Photocopy, printing & lamination support</li>
+      <li>• Photocopy, printing & lamination</li>
       <li>• School, college & office stationery</li>
-      <li>• Custom orders for shops & institutions</li>
+      <li>• Custom bulk orders</li>
     </ul>
   </div>
 </section>
@@ -225,15 +231,15 @@ const sheetId = "17ptiPL8OqfvNPnqA6Sbg3V6CpdsGsehjU3gisvy5itc";
 const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
 
 fetch(url)
-.then(res=>res.text())
-.then(txt=>{
+.then(res => res.text())
+.then(txt => {
   const json = JSON.parse(
-    txt.substring(txt.indexOf('{'), txt.lastIndexOf('}')+1)
+    txt.substring(txt.indexOf('{'), txt.lastIndexOf('}') + 1)
   );
 
-  let html="";
+  let html = "";
 
-  json.table.rows.forEach(r=>{
+  json.table.rows.forEach(r => {
     const price = r.c[0]?.v ?? "";
     const name  = r.c[1]?.v ?? "";
     const image = r.c[2]?.v ?? "";
@@ -258,6 +264,10 @@ fetch(url)
   });
 
   document.getElementById("products").innerHTML = html;
+})
+.catch(() => {
+  document.getElementById("products").innerHTML =
+    "<p>Products temporarily unavailable.</p>";
 });
 </script>
 
